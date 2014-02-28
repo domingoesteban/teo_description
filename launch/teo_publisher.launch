@@ -1,0 +1,8 @@
+<!-- *** This file launches a node that publishes the transformations of the references frames of teo humanoid robot *** -->
+
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro.py $(find teo_description)/urdf/teo_humanoid.urdf.xacro" />  
+  
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" >
+  </node>
+</launch>
